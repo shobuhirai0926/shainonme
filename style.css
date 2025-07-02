@@ -502,3 +502,190 @@ main {
         filter: blur(0);
     }
 }
+
+/* ===== スマホ用レスポンシブデザイン ===== */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 5% 3% 3% 3%;
+    }
+
+    .main-visual {
+        margin-bottom: 8%;
+    }
+
+    .main-visual .logo {
+        left: 0;
+        top: 30%;
+        height: 54%;
+    }
+
+    .slide01, .slide02, .slide03 {
+        left: 5%;
+        top: 25%;
+        width: 40%;
+    }
+
+    .about-title {
+        right: 2%;
+        top: 2%;
+        width: 23%;
+    }
+
+    .scroll-indicator {
+        right: 5px;
+        bottom: 10px;
+    }
+
+    .scroll-line {
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .scroll-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    /* Concept Section Mobile */
+    .concept-section {
+        margin-top: -5%;
+    }
+
+    .concept-container {
+        margin-top: -15%;
+    }
+
+    .logo-mark {
+        width: 15%;
+        left: 0;
+        top: -20%;
+    }
+
+    .brand-concept {
+        margin-left: 8%;
+        width: 80%;
+        margin-bottom: 5%;
+    }
+
+    .concept-text {
+        margin-left: 8%;
+        width: 84%;
+    }
+
+    .concept-text p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .symbol {
+        right: 20px;
+        top: 95%;
+        width: 30%;
+    }
+
+    /* Brand Section Mobile */
+    .brand-section {
+        padding: 40% 0 10% 0;
+    }
+
+    .flowing-text {
+        top: 1%;
+        height: 80px;
+    }
+
+    .flowing-text-content {
+        font-size: 3em;
+    }
+
+    .brand-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .brand-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .brand-content {
+        flex: none;
+        width: 100%;
+        padding-left: 0;
+        margin-top: -20%;
+        z-index: 3;
+        position: relative;
+    }
+
+    .brand-name-svg {
+        height: 50px;
+        margin-bottom: 25px;
+    }
+
+    .brand-text {
+        font-size: 12px;
+        line-height: 1.7;
+        text-align: left;
+        margin: 0 7%;
+    }
+
+    .brand-text p {
+        margin-bottom: 15px;
+    }
+
+    .decorative-circle {
+        width: 60px;
+        height: 60px;
+        top: 0%;
+        right: 5%;
+    }
+
+    /* Message Section Mobile */
+    .message-section {
+        padding: 5%;
+    }
+
+    .message-container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .message-content {
+        flex: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .message-title {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .message-text {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .message-text p {
+        margin-bottom: 15px;
+    }
+
+    .message-subtitle {
+        margin-bottom: 20px !important;
+    }
+
+    .director-signature {
+        margin-top: 30px !important;
+        font-size: 12px;
+    }
+
+    .message-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .mark03 {
+        width: 25%;
+        left: 3%;
+    }
+}
