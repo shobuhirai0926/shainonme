@@ -11,26 +11,39 @@ body {
 
 .main-visual {
     width: 100%;
-    min-height: calc(100vh + 80px);
+    min-height: 100vh;
     position: relative;
 }
 
 .visual-container {
     position: relative;
     width: 100%;
-    height: calc(100vh + 80px);
+    margin: 7% 0 0 0;
 }
 
 .logo-area {
     position: absolute;
-    left: 0;
-    top: 80px;
+    left: 60px;
+    top: -180px;
     width: 7%;
     height: calc(100vh);
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.slide-image-area {
+    position: absolute;
+    left: calc(60px + 14% + 20px);
+    top: -90px;
+    z-index: 2;
+}
+
+.slide-image {
+    width: 420px;
+    height: auto;
+    object-fit: contain;
 }
 
 .logo {
@@ -42,14 +55,27 @@ body {
 .main-image-area {
     position: absolute;
     right: 0;
-    top: 80px;
+    top: 0;
     width: 93%;
-    height: calc(100vh);
+    height: auto;
     z-index: 1;
 }
 
 .main-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+}
+
+.brand-concept-area {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    z-index: 2;
+}
+
+.brand-concept {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
 }
