@@ -30,12 +30,12 @@ main {
     opacity: 0;
     transform: translateY(30px) scale(1.05);
     animation: fadeInUp 1.2s ease-out 0.3s forwards;
-    content: url('img/main.png');
+    content: url('{{ file_root_path }}/about/img/main.png');
 }
 
 @media screen and (max-width: 768px) {
     .main-visual .main-image {
-        content: url('img/main_sp.png');
+        content: url('{{ file_root_path }}/about/img/main_sp.png');
     }
 }
 
