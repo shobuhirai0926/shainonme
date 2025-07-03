@@ -14,6 +14,15 @@ main {
     padding: 7% 5% 5% 5%;
 }
 
+.p-page_content__inner {
+    max-width: none !important;
+    margin: 0 auto;
+}
+
+.u-margin__bottom--100 {
+    margin-bottom: 0px !important;
+}
+
 .main-visual {
     width: 100%;
     text-align: right;
@@ -30,13 +39,6 @@ main {
     opacity: 0;
     transform: translateY(30px) scale(1.05);
     animation: fadeInUp 1.2s ease-out 0.3s forwards;
-    content: url('{{ file_root_path }}/about/img/main.png');
-}
-
-@media screen and (max-width: 768px) {
-    .main-visual .main-image {
-        content: url('{{ file_root_path }}/about/img/main_sp.png');
-    }
 }
 
 .main-visual .logo {
@@ -313,7 +315,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     position: relative;
 }
@@ -331,7 +333,7 @@ main {
 
 .brand-content {
     flex: 0 0 50%;
-    padding-left: 5%;
+    padding-left: 0;
 }
 
 .brand-name-svg {
@@ -506,7 +508,11 @@ main {
 /* ===== スマホ用レスポンシブデザイン ===== */
 @media screen and (max-width: 768px) {
     main {
-        padding: 5% 3% 3% 3%;
+        padding: 0;
+    }
+
+    .u-margin__top--60 {
+        margin-top: 30px !important;
     }
 
     .main-visual {
@@ -517,6 +523,7 @@ main {
         left: 0;
         top: 30%;
         height: 54%;
+        filter: none;
     }
 
     .slide01, .slide02, .slide03 {
@@ -687,5 +694,11 @@ main {
     .mark03 {
         width: 25%;
         left: 3%;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .p-page_content {
+        padding: 0 8% !important;
     }
 }
