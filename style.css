@@ -27,11 +27,11 @@ main {
     width: 100%;
     text-align: right;
     position: relative;
-    margin-bottom: 5%;
+    margin-bottom: 9%;
 }
 
 .main-visual .main-image {
-    width: 95%;
+    width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -43,44 +43,14 @@ main {
 
 .main-visual .logo {
     position: absolute;
-    left: 0;
-    top: 40%;
-    transform: translateY(-50%) translateX(-50px);
-    height: 90%;
+    left: 5%;
+    top: 26%;
+    height: 40%;
     width: auto;
     z-index: 2;
     opacity: 0;
-    filter: blur(3px);
-    animation: logoSlideIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards;
-}
-
-.slide01, .slide02, .slide03 {
-    position: absolute;
-    left: 15%;
-    top: 33%;
-    transform: translateY(-50%) translateX(-30px);
-    width: 27%;
-    height: auto;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
-}
-
-.slide01.active, .slide02.active, .slide03.active {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
-}
-
-.about-title {
-    position: absolute;
-    right: 1%;
-    top: 1%;
-    width: 10%;
-    height: auto;
-    z-index: 2;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: aboutFadeIn 1.2s ease-out 1s forwards;
+    filter: none !important;
+    animation: simpleFadeIn 1.5s ease-out 0.8s forwards;
 }
 
 .scroll-indicator {
@@ -128,13 +98,14 @@ main {
     width: 100%;
     padding: 0;
     position: relative;
-    margin-top: -15%;
+    margin-top: 0;
+    margin-bottom: 10%;
 }
 
 .concept-container {
     position: relative;
     width: 100%;
-    margin-top: 12%;
+    margin-top: 5%;
 }
 
 .logo-mark {
@@ -153,13 +124,18 @@ main {
 .brand-concept {
     display: block;
     margin-left: 12%;
-    width: 48%;
+    width: auto;
     height: auto;
     z-index: 2;
     opacity: 0;
     transform: translateX(30px);
     animation: brandSlideIn 1.3s ease-out 2s forwards;
-    margin-bottom: 3%;
+    margin-bottom: 10%;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #333;
 }
 
 .concept-text {
@@ -169,10 +145,11 @@ main {
     opacity: 0;
     transform: translateY(20px);
     animation: textFadeIn 1.5s ease-out 2.5s forwards;
+    margin-bottom: 5%;
 }
 
 .concept-text p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.8;
     color: #333;
     margin: 0;
@@ -180,23 +157,10 @@ main {
     text-align: left;
 }
 
-.symbol {
-    position: absolute;
-    right: 10%;
-    top: 10%;
-    width: 20%;
-    height: auto;
-    z-index: 2;
-    opacity: 0;
-    transform: translateX(20px) rotate(15deg);
-    animation: symbolAppear 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 2.3s forwards,
-               floatUpDown 3.5s ease-in-out 3.5s infinite;
-}
-
 /* Message Section */
 .message-section {
     width: 100%;
-    padding: 3%;
+    padding: 8% 3%;
     position: relative;
     background-color: #F0ECE9;
 }
@@ -207,7 +171,7 @@ main {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 5%;
+    gap: 10%;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -219,18 +183,23 @@ main {
 }
 
 .message-content {
-    flex: 0 0 50%;
-    padding-right: 3%;
+    flex: 0 0 40%;
+    padding-right: 0;
 }
 
 .message-title {
-    width: 60%;
+    width: auto;
     height: auto;
     margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #333;
 }
 
 .message-text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.8;
     color: #333;
 }
@@ -251,64 +220,31 @@ main {
 }
 
 .message-image {
-    flex: 0 0 45%;
+    flex: 0 0 35%;
     position: relative;
+    min-height: 500px;
 }
 
 .kaji-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }
 
-.mark03 {
-    position: absolute;
-    left: 5%;
-    top: 0;
-    width: 20%;
-    height: auto;
-    z-index: 2;
-    animation: floatUpDown 3.5s ease-in-out infinite;
+.kaji-image.active {
+    opacity: 1;
 }
 
 /* Brand Section */
 .brand-section {
     width: 100%;
-    padding: 8% 0;
+    padding: 12% 0;
     position: relative;
-    overflow: hidden;
-}
-
-.flowing-text {
-    position: absolute;
-    top: 3%;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-}
-
-.flowing-text-content {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 6em;
-    color: rgba(222, 217, 215, 0.5);
-    font-weight: 300;
-    font-family: 'Playfair Display', serif;
-    animation: flowText 600s linear infinite;
-    line-height: 1;
-}
-
-@keyframes flowText {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
 }
 
 .brand-container {
@@ -338,30 +274,23 @@ main {
 
 .brand-name-svg {
     width: auto;
-    height: 69px;
+    height: auto;
     margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #333;
 }
 
 .brand-text {
     line-height: 1.8;
     color: #333;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .brand-text p {
     margin-bottom: 20px;
-}
-
-.decorative-circle {
-    position: absolute;
-    top: 15%;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background-color: #aea3a4;
-    border-radius: 50%;
-    z-index: 1;
-    animation: floatUpDown 4s ease-in-out infinite;
 }
 
 /* Animations */
@@ -505,8 +434,55 @@ main {
     }
 }
 
+@keyframes simpleFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoSlideInMobile {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-50px);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-50%) translateX(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
 /* ===== スマホ用レスポンシブデザイン ===== */
 @media screen and (max-width: 768px) {
+    /* 共通のセクションスタイル */
+    .mobile-section-content {
+        margin: 0 8%;
+    }
+    
+    .mobile-svg-title {
+        height: auto;
+        margin-bottom: 25px;
+        margin-left: 8%;
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #333;
+    }
+    
+    .mobile-text-content {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: left;
+        margin: 0 8%;
+    }
+
     main {
         padding: 0;
     }
@@ -516,14 +492,15 @@ main {
     }
 
     .main-visual {
-        margin-bottom: 8%;
+        margin-bottom: 0;
     }
 
     .main-visual .logo {
-        left: 0;
-        top: 30%;
-        height: 54%;
-        filter: none;
+        left: 5%;
+        top: 5%;
+        height: 40%;
+        filter: none !important;
+        animation: simpleFadeIn 1.5s ease-out 0.8s forwards;
     }
 
     .slide01, .slide02, .slide03 {
@@ -555,11 +532,11 @@ main {
 
     /* Concept Section Mobile */
     .concept-section {
-        margin-top: -5%;
+        margin: 10% 0;
     }
 
     .concept-container {
-        margin-top: -15%;
+        margin-top: 0;
     }
 
     .logo-mark {
@@ -570,38 +547,25 @@ main {
 
     .brand-concept {
         margin-left: 8%;
-        width: 80%;
+        width: auto;
+        height: 35px;
         margin-bottom: 5%;
     }
 
     .concept-text {
-        margin-left: 8%;
+        margin: 0 8%;
         width: 84%;
+        margin-bottom: 0;
     }
 
     .concept-text p {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-    .symbol {
-        right: 20px;
-        top: 95%;
-        width: 30%;
+        font-size: 14px;
+        line-height: 2;
     }
 
     /* Brand Section Mobile */
     .brand-section {
-        padding: 40% 0 10% 0;
-    }
-
-    .flowing-text {
-        top: 1%;
-        height: 80px;
-    }
-
-    .flowing-text-content {
-        font-size: 3em;
+        padding: 0;
     }
 
     .brand-container {
@@ -619,58 +583,57 @@ main {
         flex: none;
         width: 100%;
         padding-left: 0;
-        margin-top: -20%;
+        margin-top: 0;
         z-index: 3;
         position: relative;
+        text-align: left;
     }
 
     .brand-name-svg {
-        height: 50px;
+        /* mobile-svg-titleクラスと同じスタイル */
+        height: 29px;
         margin-bottom: 25px;
+        margin-left: 8%;
     }
 
     .brand-text {
-        font-size: 12px;
+        /* mobile-text-contentクラスと同じスタイル */
+        font-size: 14px;
         line-height: 1.7;
         text-align: left;
-        margin: 0 7%;
+        margin: 0 8%;
     }
 
     .brand-text p {
         margin-bottom: 15px;
     }
 
-    .decorative-circle {
-        width: 60px;
-        height: 60px;
-        top: 0%;
-        right: 5%;
-    }
-
     /* Message Section Mobile */
     .message-section {
-        padding: 5%;
+        padding: 0;
     }
 
     .message-container {
         flex-direction: column-reverse;
-        gap: 30px;
+        gap: 50px;
     }
 
     .message-content {
         flex: none;
-        width: 100%;
-        padding-right: 0;
     }
 
     .message-title {
-        width: 70%;
+        /* mobile-svg-titleクラスと同じスタイル */
+        width: auto;
+        height: 30px;
         margin-bottom: 20px;
     }
 
     .message-text {
-        font-size: 13px;
+        /* mobile-text-contentクラスと同じスタイル */
+        font-size: 14px;
         line-height: 1.7;
+        margin: 0 8%;
     }
 
     .message-text p {
@@ -689,16 +652,5 @@ main {
     .message-image {
         flex: none;
         width: 100%;
-    }
-
-    .mark03 {
-        width: 25%;
-        left: 3%;
-    }
-}
-
-@media screen and (max-width: 719px) {
-    .p-page_content {
-        padding: 0 8% !important;
     }
 }
