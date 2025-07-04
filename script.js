@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // レスポンシブ画像の設定
     function setResponsiveImage() {
-        const mainImage = document.querySelector('.main-image');
+        const heroImage = document.querySelector('.hero-image');
         
         if (window.innerWidth <= 768) {
-            mainImage.src = 'img/main_sp.png';
+            heroImage.src = 'https://d2w53g1q050m78.cloudfront.net/shainonmecom/uploads/about/img/main_sp.png?1751630385356';
         } else {
-            mainImage.src = 'img/main.png';
+            heroImage.src = 'https://d2w53g1q050m78.cloudfront.net/shainonmecom/uploads/about/img/main.png?1751630385355';
         }
     }
     
@@ -30,9 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function showKajiSlide(index) {
         // すべてのスライドを非アクティブに
-        kajiSlides.forEach(slide => slide.classList.remove('active'));
+        kajiSlides.forEach(slide => {
+            if (slide) slide.classList.remove('active');
+        });
         // 指定されたスライドをアクティブに
-        kajiSlides[index].classList.add('active');
+        if (kajiSlides[index]) {
+            kajiSlides[index].classList.add('active');
+        }
     }
     
     function nextKajiSlide() {
@@ -44,16 +48,17 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(nextKajiSlide, 5000);
     
     // スクロールアニメーション
-    const messageContainer = document.querySelector('.message-container');
+    const contentSections = document.querySelectorAll('.content-section');
     
     function checkScroll() {
-        // Message container
-        const messageTop = messageContainer.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (messageTop < windowHeight * 0.75) {
-            messageContainer.classList.add('fade-in');
-        }
+        contentSections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (sectionTop < windowHeight * 0.75) {
+                section.classList.add('fade-in');
+            }
+        });
     }
     
     // スクロールイベントリスナー
